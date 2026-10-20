@@ -1,0 +1,312 @@
+/* Main App Styles - Modern & Classy Theme */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.03), rgba(52, 152, 219, 0.03));
+  z-index: -1;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+main.container {
+  flex: 1;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dashboard */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0.2s;
+}
+
+.stat-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid #3498db;
+}
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, rgba(52, 152, 219, 0) 70%);
+  border-radius: 50%;
+}
+
+.stat-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.stat-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.stat-card .count {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3498db;
+  margin: 0.5rem 0 1rem;
+  line-height: 1;
+}
+
+/* Forms */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3e50, #3498db);
+}
+
+.form-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.form-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.table {
+  margin-bottom: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background: linear-gradient(90deg, #2c3e50, #3498db);
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  padding: 1rem 1.5rem;
+  border: none;
+}
+
+.table td {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+/* Cards */
+.card {
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3e50, #3498db);
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Alerts */
+.alert {
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-success {
+  background-color: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+  border-left: 4px solid #27ae60;
+}
+
+.alert-danger {
+  background-color: rgba(192, 57, 43, 0.1);
+  color: #c0392b;
+  border-left: 4px solid #c0392b;
+}
+
+.alert-warning {
+  background-color: rgba(243, 156, 18, 0.1);
+  color: #f39c12;
+  border-left: 4px solid #f39c12;
+}
+
+.alert-info {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+  border-left: 4px solid #3498db;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 30px;
+  padding: 0.7rem 1.8rem;
+  margin-right: 0.75rem;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+  transition: all 0.6s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  border: none;
+  color: white;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  border: none;
+  color: white;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border: none;
+  color: white;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #f39c12, #f1c40f);
+  border: none;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+}

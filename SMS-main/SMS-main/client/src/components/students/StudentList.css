@@ -1,0 +1,64 @@
+.student-list-container {
+  padding-bottom: 2rem;
+}
+
+.hover-effect {
+  transition: all 0.2s ease-in-out;
+}
+
+.hover-effect:hover {
+  background-color: rgba(0, 123, 255, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  font-weight: 500;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 0.35em 0.65em;
+}
+
+.progress {
+  height: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+/* Button styling */
+.btn-sm {
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.btn-sm:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Card animations */
+.card .card-body {
+  transition: all 0.3s ease;
+}
+
+/* Statistics cards */
+.card .bg-info, .card .bg-success, .card .bg-warning {
+  transition: all 0.3s ease;
+}
+
+.card .bg-info:hover, .card .bg-success:hover, .card .bg-warning:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,385 @@
+/* Custom Styling for School Management System - Modern & Classy Theme */
+
+/* Variables for consistent theming */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #c0392b;
+  --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --border-radius: 12px;
+}
+
+/* Main container styling */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Main header section styling */
+.jumbotron {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 3.5rem 2.5rem !important;
+  margin-bottom: 3rem !important;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: 100% 100%;
+}
+
+.jumbotron h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron .lead {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+/* Card styling for feature sections */
+.card {
+  border: none !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--box-shadow) !important;
+  transition: var(--transition) !important;
+  height: 100% !important;
+  margin-bottom: 2rem !important;
+  background-color: white !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.card:hover {
+  transform: translateY(-7px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+.card-body {
+  padding: 2.2rem !important;
+}
+
+.card-title {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 1.2rem !important;
+  position: relative !important;
+  padding-bottom: 0.8rem !important;
+}
+
+.card-title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 40px !important;
+  height: 3px !important;
+  background-color: var(--secondary-color) !important;
+}
+
+.card-text {
+  color: var(--text-secondary) !important;
+  line-height: 1.8 !important;
+  font-size: 1.05rem !important;
+}
+
+/* Button styling */
+.btn {
+  border-radius: 30px !important;
+  padding: 0.7rem 1.8rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  font-size: 0.9rem !important;
+  transition: var(--transition) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.btn::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4), rgba(255,255,255,0.1)) !important;
+  transition: all 0.6s ease !important;
+}
+
+.btn:hover::before {
+  left: 100% !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  border: none !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3) !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4) !important;
+}
+
+.btn-secondary {
+  background-color: var(--light-color) !important;
+  border: none !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Navbar styling */
+.navbar-dark.bg-primary {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+  padding: 0.8rem 1rem !important;
+}
+
+/* Footer styling */
+.footer {
+  background: linear-gradient(90deg, var(--primary-color), var(--dark-color)) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 3rem 0 !important;
+  margin-top: 3rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.footer::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color)) !important;
+}
+
+.footer h5 {
+  color: white !important;
+  font-weight: 600 !important;
+  margin-bottom: 1.5rem !important;
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.footer h5::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -8px !important;
+  left: 0 !important;
+  width: 30px !important;
+  height: 2px !important;
+  background-color: var(--secondary-color) !important;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: var(--transition) !important;
+}
+
+.footer a:hover {
+  color: white !important;
+  text-decoration: none !important;
+  transform: translateX(5px) !important;
+}
+
+.footer p {
+  margin-bottom: 0.8rem !important;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  padding: 1.5rem 0 !important;
+  margin-top: 2rem !important;
+  font-size: 0.9rem !important;
+}
+
+/* Table styling */
+.table {
+  border-radius: var(--border-radius) !important;
+  overflow: hidden !important;
+  box-shadow: var(--box-shadow) !important;
+  border: none !important;
+}
+
+.table thead th {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+  color: white !important;
+  border: none !important;
+  padding: 1rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.5px !important;
+}
+
+.table tbody tr {
+  transition: var(--transition) !important;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(52, 152, 219, 0.05) !important;
+}
+
+.table td {
+  padding: 1rem !important;
+  vertical-align: middle !important;
+  border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Form styling */
+.form-control {
+  border-radius: var(--border-radius) !important;
+  padding: 0.8rem 1rem !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  transition: var(--transition) !important;
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border-color: var(--secondary-color) !important;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2) !important;
+}
+
+label {
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+  color: var(--text-primary) !important;
+}
+
+/* Badge styling */
+.badge {
+  padding: 0.5rem 0.8rem !important;
+  font-weight: 500 !important;
+  border-radius: 30px !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  font-size: 0.75rem !important;
+}
+
+.badge-primary {
+  background-color: var(--secondary-color) !important;
+}
+
+.badge-success {
+  background-color: var(--success-color) !important;
+}
+
+.badge-warning {
+  background-color: var(--warning-color) !important;
+}
+
+.badge-danger {
+  background-color: var(--danger-color) !important;
+}
+
+/* Animation effects */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards !important;
+}
+
+/* Dashboard stats cards */
+.stat-card {
+  border-radius: var(--border-radius) !important;
+  padding: 2rem !important;
+  background: white !important;
+  box-shadow: var(--box-shadow) !important;
+  transition: var(--transition) !important;
+  border-left: 4px solid var(--secondary-color) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.stat-card:hover {
+  transform: translateY(-7px) !important;
+}
+
+.stat-card .stat-icon {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  font-size: 2.5rem !important;
+  opacity: 0.1 !important;
+  color: var(--primary-color) !important;
+}
+
+.stat-card .stat-title {
+  text-transform: uppercase !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px !important;
+  color: var(--text-secondary) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.stat-card .stat-value {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.stat-card .stat-desc {
+  font-size: 0.9rem !important;
+  color: var(--text-secondary) !important;
+}
+.footer {
+  background-color: #3f51b5 !important;
+  color: white !important;
+  padding: 2rem 0 !important;
+  margin-top: 3rem !important;
+  text-align: center !important;
+}
